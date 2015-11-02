@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>Admin</title>
+</h:head>
+<h:body>
+	<h:form id="adminForm">
+
+		<p:panel header="Admin">
+			<h:panelGrid columns="2">
+				<h:outputText value="Message for users" />
+				<p:editor value="#{adminBean.htmlMessage}"></p:editor>
+
+				<p:commandButton value="Send Message!" actionListener="#{adminBean.pushMessage}"></p:commandButton>
+			</h:panelGrid>
+		</p:panel>
+	</h:form>
+</h:body>
+</html>
